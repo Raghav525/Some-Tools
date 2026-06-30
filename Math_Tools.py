@@ -1,7 +1,6 @@
 from datetime import datetime
 import math
 import os
-from My_language import converter
 
 def get_number(message):
     while True:
@@ -231,104 +230,84 @@ def clear_history():
     print("History cleared.")
 
 def calculator():
-    while True:
-        Pass = converter(input("What is the password? "))
-        if Pass == "Kqe#KXe#gZq#a#":
-            while True:
-                print("\nAvailable operations:")
-                print("1. addition")
-                print("2. subtraction")
-                print("3. multiplication")
-                print("4. division")
-                print("5. square")
-                print("6. square root")
-                print("7. exponentiation")
-                print("8. factorial")
-                print("9. AP(arithmetic progression)")
-                print("10. Prime checker")
-                print("11. view history")
-                print("12. clear history")
-                print("13. back")
+        while True:
+            print("\nAvailable operations:")
+            print("1. addition")
+            print("2. subtraction")
+            print("3. multiplication")
+            print("4. division")
+            print("5. square")
+            print("6. square root")
+            print("7. exponentiation")
+            print("8. factorial")
+            print("9. AP(arithmetic progression)")
+            print("10. Prime checker")
+            print("11. view history")
+            print("12. clear history")
+            print("13. back")
 
-                choices = {
-                    "addition": addition,
-                    "1": addition,
-                    "+": addition,
-                    "add": addition,
-                    "subtraction": subtract,
-                    "2": subtract,
-                    "-": subtract,
-                    "subract": subtract,
-                    "multiplication": multiply,
-                    "3": multiply,
-                    "x": multiply,
-                    "multiply": multiply,
-                    "*": multiply,
-                    "division": divide,
-                    "4": divide,
-                    "/": divide,
-                    "divide": divide,
-                    "square": square,
-                    "5": square,
-                    "square root": square_root,
-                    "sq root": square_root,
-                    "sq rt": square_root,
-                    "6": square_root,
-                    "exponentiation": exponentiation,
-                    "**": exponentiation,
-                    "^": exponentiation,
-                    "7": exponentiation,
-                    "factorial": factorial,
-                    "8": factorial,
-                    "!": factorial,
-                    "ap": ap,
-                    "arithmetic progression": ap,
-                    "9": ap, 
-                    "prime checker": prime_check,
-                    "prime check": prime_check,
-                    "prime": prime_check,
-                    "10": prime_check,
-                    "view history": view_history,
-                    "history": view_history,
-                    "view": view_history,
-                    "11": view_history,
-                    "clear history": clear_history,
-                    "12": clear_history,
-                    "clear": clear_history
-                }
-                
-                choice = input("Choose an operation: ").lower()
-
-                if choice in choices:
-                    choices[choice]()
-
-                elif choice in ["exit", "13", "back"]:
-                    print("Goodbye!")
-                    break
-
-                else:
-                    print("Invalid choice.")
+            choices = {
+                "addition": addition,
+                "1": addition,
+                "+": addition,
+                "add": addition,
+                "subtraction": subtract,
+                "2": subtract,
+                "-": subtract,
+                "subract": subtract,
+                "multiplication": multiply,
+                "3": multiply,
+                "x": multiply,
+                "multiply": multiply,
+                "*": multiply,
+                "division": divide,
+                "4": divide,
+                "/": divide,
+                "divide": divide,
+                "square": square,
+                "5": square,
+                "square root": square_root,
+                "sq root": square_root,
+                "sq rt": square_root,
+                "6": square_root,
+                "exponentiation": exponentiation,
+                "**": exponentiation,
+                "^": exponentiation,
+                "7": exponentiation,
+                "factorial": factorial,
+                "8": factorial,
+                "!": factorial,
+                "ap": ap,
+                "arithmetic progression": ap,
+                "9": ap, 
+                "prime checker": prime_check,
+                "prime check": prime_check,
+                "prime": prime_check,
+                "10": prime_check,
+                "view history": view_history,
+                "history": view_history,
+                "view": view_history,
+                "11": view_history,
+                "clear history": clear_history,
+                "12": clear_history,
+                "clear": clear_history
+            }
             
-        elif Pass in ["oMt#Z#", "oMT#Z#"]:
-            break
+            choice = input("Choose an operation: ").lower()
+
+            if choice in choices:
+                choices[choice]()
+
+            elif choice in ["exit", "13", "back"]:
+                print("Goodbye!")
+                break
+
+            else:
+                print("Invalid choice.")
         
-        else:
-            print("Incorrect password.")
+    elif Pass in ["oMt#Z#", "oMT#Z#"]:
+        break
             
 if __name__ == "__main__":
     calculator()
-
-
-def factorise(a):
-    factors = []
-    for i in range(1, int(a ** 0.5) + 1):
-        if a % i == 0:
-            factors.append(i)
-        
-    for i in factors:
-        return i, factors
-  
-def factorise_ui():
-    a = get_int("Enter a number: ")
-    factors = factorise(a)
   
