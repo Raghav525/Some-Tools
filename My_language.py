@@ -122,39 +122,32 @@ def deconverter(message):
 
     return message
 
-def main():
+def main(): 
     while True:
-        Pass = converter(input("Enter the password to access the Code Converter: "))
-        if Pass == "uqa#Cqi#iZ_#u_t#rg#":
+        print("\nWelcome to the Code Converter!")
+        print("Ktv#Jge#Z_t#Z_g#_ti#rge#e_t#CHg#Zat#!at#")
+        print("Options:")
+        print("1. Convert into code language")
+        print("2. Deconvert into English")
+        print("3. Exit")
         
-            while True:
-                print("\nWelcome to the Code Converter!")
-                print("Ktv#Jge#Z_t#Z_g#_ti#rge#e_t#CHg#Zat#!at#")
-                print("Options:")
-                print("1. Convert into code language")
-                print("2. Deconvert into English")
-                print("3. Exit")
-                
-                choice = input("Enter your choice: ").strip().lower()
-                
-                if choice in ["1", "coverter", "convert", "c", "convertintocode", "convertintocodelanguage"]:
-                    message = input("Enter the message: ")
-                    print(f"Message in code language: {converter(message)}")
+        choice = input("Enter your choice: ").strip().lower()
+        
+        if choice in ["1", "coverter", "convert", "c", "convertintocode", "convertintocodelanguage"]:
+            message = input("Enter the message: ")
+            print(f"Message in code language: {converter(message)}")
 
-                elif choice in ["2", "deconverter", "deconvert", "d", "deconvertintoenglish", "coverterintoenglish"]:
-                    message = input("Enter the message: ")
-                    print(f"Message in English: {deconverter(message)}")
-                    
-                elif choice in ["exit", "3", "back"]:
-                    print("Logging out...")
-                    print("rrJ#beg#!h#")
-                    break
-                    
-                else:
-                    print("Invalid choice. Please try again.")
-        
-        elif Pass in ["oMt#Z#", "oMT#Z#"]:
+        elif choice in ["2", "deconverter", "deconvert", "d", "deconvertintoenglish", "coverterintoenglish"]:
+            message = input("Enter the message: ")
+            print(f"Message in English: {deconverter(message)}")
+            
+        elif choice in ["exit", "3", "back"]:
+            print("Logging out...")
+            print("rrJ#beg#!h#")
             break
+            
+        else:
+            print("Invalid choice. Please try again.")
         
 if __name__ == "__main__":
     main()
