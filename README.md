@@ -7,3 +7,10 @@ A python project that contains:
 - A calculator
 - A custom secret language
 - Password making
+
+Required python libraries:
+- os
+- random
+- shutil
+- datetime
+- math
