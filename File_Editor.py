@@ -248,52 +248,44 @@ def File_edit():
         return
 
 def File_Editor():
-    while True:
-        Pass = input("\nEnter the password to access the File Editor: ")
-        
-        if converter(Pass) == "Koy#t_t#Zor#ag#":    
-            while True:
-                print("1. Create files")
-                print("2. Delete files")
-                print("3. View files")
-                print("4. Edit files")
-                print("5. Copy files")
-                print("6. Cut files")
-                print("7. Rename files")
-                print("8. Back")
-                choice = input("Enter your choice: ").strip().lower()
+        while True:
+            print("1. Create files")
+            print("2. Delete files")
+            print("3. View files")
+            print("4. Edit files")
+            print("5. Copy files")
+            print("6. Cut files")
+            print("7. Rename files")
+            print("8. Back")
+            choice = input("Enter your choice: ").strip().lower()
 
-                menu = {
-                "1": File_create,
-                "create": File_create,
-                "file create": File_create,
-                "2": File_delete,
-                "delete": File_delete,
-                "3": File_view,
-                "view": File_view,
-                "4": File_edit,
-                "edit": File_edit,
-                "5": File_Copy,
-                "copy": File_Copy,
-                "6": File_cut,
-                "cut": File_cut,
-                "7": File_rename,
-                "rename": File_rename
-                }
+            menu = {
+            "1": File_create,
+            "create": File_create,
+            "file create": File_create,
+            "2": File_delete,
+            "delete": File_delete,
+            "3": File_view,
+            "view": File_view,
+            "4": File_edit,
+            "edit": File_edit,
+            "5": File_Copy,
+            "copy": File_Copy,
+            "6": File_cut,
+            "cut": File_cut,
+            "7": File_rename,
+            "rename": File_rename
+            }
 
-                if choice in menu:
-                    menu[choice]()
+            if choice in menu:
+                menu[choice]()
 
-                elif choice in ["8", "back", "exit"]:
-                    print("Logging out...")
-                    break
+            elif choice in ["8", "back", "exit"]:
+                print("Logging out...")
+                break
 
-                else:
-                    print("Invalid choice. Please try again.")
-                    
-        elif Pass in ["exit", "quit"]:
-            print("Exiting...")
-            break
+            else:
+                print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     File_Editor()
