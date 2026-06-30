@@ -1,4 +1,3 @@
-from My_language import converter, deconverter
 import os
 
 def Pwd_generate():
